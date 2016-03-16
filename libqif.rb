@@ -17,15 +17,18 @@ class Libqif < Formula
   end
 
   test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! It's enough to just replace
-    # "false" with the main program this formula installs, but it'd be nice if you
-    # were more thorough. Run the test with `brew test libqif`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
-    #
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "true"
+    (testpath/"test.cpp").write <<-EOS
+      #include <iostream>
+      #include <qif>
+      using namespace std;
+      using namespace qif;
+
+      int main(int argc, char** argv)
+        {
+        cout << probab::is_proper(probab::uniform<double>(5)) << endl;
+        }
+    EOS
+    system ENV.cxx, "test.cpp", "-I#{include}", "-L#{lib}", "-std=c++11", "-lqif", "-larmadillo", "-o", "test"
+    assert_equal `./test`, "1\n"
   end
 end
