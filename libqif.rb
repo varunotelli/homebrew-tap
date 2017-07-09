@@ -11,9 +11,10 @@ class Libqif < Formula
 
   def install
     ENV.cxx11
-
-    system "cmake", ".", *std_cmake_args
-    system "make", "install"
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args
+      system "make", "install"
+    end
   end
 
   test do
