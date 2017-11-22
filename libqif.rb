@@ -4,8 +4,8 @@ class Libqif < Formula
   head "https://github.com/chatziko/libqif.git"
 
   depends_on "cmake" => :build
-  depends_on "homebrew/science/armadillo" => "with-cxx11"
-  depends_on "homebrew/science/glpk"
+  depends_on "armadillo" => "with-cxx11"
+  depends_on "glpk"
   depends_on "gsl"
   depends_on "gmp"
 
