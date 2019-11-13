@@ -8,7 +8,10 @@ class Libqif < Formula
   depends_on "glpk"
   depends_on "gsl"
   depends_on "gmp"
-  depends_on "or-tools"
+
+  if OS.mac?
+    depends_on "or-tools"
+  end
 
   def install
     ENV.cxx11
