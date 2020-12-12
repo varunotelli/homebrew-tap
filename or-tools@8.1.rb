@@ -1,4 +1,4 @@
-class OrTools < Formula
+class OrToolsAT81 < Formula
   desc "Google's Operations Research tools"
   homepage "https://developers.google.com/optimization/"
   url "https://github.com/google/or-tools/releases/download/v8.1/or-tools_MacOsX-10.15.7_v8.1.8487.tar.gz"
