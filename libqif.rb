@@ -10,7 +10,7 @@ class Libqif < Formula
   depends_on "gmp"
 
   if OS.mac?
-    depends_on "or-tools"
+    depends_on "or-tools" => "8.1"
   end
 
   def install
