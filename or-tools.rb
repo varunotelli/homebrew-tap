@@ -1,8 +1,8 @@
 class OrTools < Formula
   desc "Google's Operations Research tools"
   homepage "https://developers.google.com/optimization/"
-  url "https://github.com/google/or-tools/releases/download/v7.4/or-tools_MacOsX-10.14.6_v7.4.7247.tar.gz"
-  sha256 "b105d19b780582040eb78bc5cd8788e9ca740e0bb558757b05377a52831dcc36"
+  url "https://github.com/google/or-tools/releases/download/v8.1/or-tools_MacOsX-10.15.7_v8.1.8487.tar.gz"
+  sha256 "cdf5d5c4dd10ddfa39eb951e6b8122b2a48c7d1dbd87bb5f792a7596aea8b8bb"
 
   bottle :unneeded
 
