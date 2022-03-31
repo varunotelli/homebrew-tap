@@ -32,7 +32,7 @@ class Libqif < Formula
         cout << probab::is_proper(probab::uniform<double>(5)) << endl;
         }
     EOS
-    system ENV.cxx, "test.cpp", "-I#{include}", "-L#{lib}", "-L/usr/local/lib", "-std=c++17", "-lqif", "-larmadillo", "-lmp++", "-o", "test"
+    system ENV.cxx, "test.cpp", "-I#{include}", "-L#{lib}", "-L/usr/local/lib", "-std=c++17", "-lqif", "-lgmpxx", "-lgmp", "-larmadillo", "-lmp++", "-o", "test"
     assert_equal `./test`, "1\n"
   end
 end
